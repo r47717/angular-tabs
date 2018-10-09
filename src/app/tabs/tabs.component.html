@@ -1,0 +1,12 @@
+<div>
+  <div class="tabs__titles">
+    <tab-title *ngFor="let tab of tabs" [tabData]="tab.title" [active]="tab.id === activeTab" (click)="onClickTitle(tab)">
+    </tab-title>
+  </div>
+  <div *ngIf="tabs.length > 0">
+    <tab-content [content]="getActiveContent()"></tab-content>
+  </div>
+  <div *ngIf="tabs.length === 0">
+    <em>No tabs</em>
+  </div>
+</div>

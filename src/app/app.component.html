@@ -1,0 +1,10 @@
+<button (click)="dec()" [disabled]="tabs.length === 0">
+    Remove tab
+</button>
+<button (click)="inc()" [disabled]="tabs.length >=  MAX_TABS_NO">
+    Add tab
+</button>
+
+<br>
+
+<tabs [tabs]="tabs" [activeTab]="activeTab" (onClickTitleEvent)="onClickTitle($event)"></tabs>
